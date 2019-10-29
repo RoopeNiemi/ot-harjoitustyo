@@ -33,7 +33,7 @@ commit 862b9fce196f2a39232d3343c983c833790dbff1
 Author: elli kiiski <kiiski.elli@gmail.com>
 Date:   Tue Oct 29 21:22:58 2019 +0200
 
-    asdfghjkl
+    asdfghjklöä
 
  eka.txt    | 10 +---------
  kolmas.txt |  4 +++-
