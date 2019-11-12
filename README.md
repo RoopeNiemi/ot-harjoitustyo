@@ -3,6 +3,8 @@
 ## *PROJEKTITYÖ*
 Projektiin liittyvät tiedostot ovat omassa [kansiossaan](https://github.com/ellikiiski/ot-harjoitustyo/tree/master/projekti).
 
+### [Työaikakirjanpito](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/projekti/tyoaikakirjanpito.md) ###
+
 ### Viikoittaiset kehitysaskeleet ###
 [(2) Vaatimusmäärittely](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/projekti/vaatimusmaarittely.md)
 
