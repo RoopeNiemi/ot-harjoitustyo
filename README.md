@@ -1,5 +1,8 @@
 # **OHJELMISTOTEKNIIKKA 2019**
 
+## *PROJEKTITYÖ*
+En nyt ole ihan varma miten tämä homma toimii kun ohjeet on vähän epäselvät
+
 ## *TEHTÄVÄT*
 
 ### **Ekan viikon [laskarit](https://github.com/ellikiiski/ot-harjoitustyo/tree/master/laskarit/viikko1)**
