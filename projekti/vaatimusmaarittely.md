@@ -13,6 +13,7 @@ Aluksi:
   * Erityisruokavaliot
   * ...
 * Kokoaa yhteen tiedot kunkin juoman menekistä, ts. laskee kuinka paljon kutakin juomaa tarvitsee ostaa
+
 Myöhemmin:
 * Tekee sitsiplassiehdotuksen ottaen huomioon paikkatoiveet
 
