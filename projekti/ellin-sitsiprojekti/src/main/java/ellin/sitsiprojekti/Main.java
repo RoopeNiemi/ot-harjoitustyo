@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ellin.sitsiprojekti;
 
 import java.util.Scanner;
 
-/**
- *
- * @author kiisk
- */
 public class Main {
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
@@ -20,7 +12,10 @@ public class Main {
         
         Sitsit sitsit = new Sitsit(sitsienNimi);
         IlmojenHallinta hallinta = new IlmojenHallinta(sitsit);
-
+        
+        //Väliaikainen tekstikäyttöliittymä
+        //Tulevaisuudessa tiedot luetaan tiedostosta,
+        //mikä vuoksi käyttäjä syöttää tässä versioissa 
         System.out.println("Kirjoita sarakkeiden otsikot (erottele tabulaattorilla), nimi ja sähköposti kahteen ensimmäiseen sarakkeeseen:");
         String kaikkiOtsikot = lukija.nextLine();
         String[] otsikot = kaikkiOtsikot.split("\t");

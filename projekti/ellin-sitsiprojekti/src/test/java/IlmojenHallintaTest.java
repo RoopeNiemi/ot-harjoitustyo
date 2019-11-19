@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 import ellin.sitsiprojekti.Henkilo;
 import ellin.sitsiprojekti.Ilmo;
@@ -15,10 +10,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author kiisk
- */
 public class IlmojenHallintaTest {
     
     Sitsit sitsit;
@@ -39,7 +30,6 @@ public class IlmojenHallintaTest {
     @Test
     public void uusiIlmoRekisteroityy() {
         hallinta.lisaaIlmo(ilmo);
-        hallinta.lisaaIlmo(ilmo);
-        assertEquals(2, hallinta.ilmojenMaara());
+        assertEquals(1, hallinta.ilmojenMaara());
     }
 }
