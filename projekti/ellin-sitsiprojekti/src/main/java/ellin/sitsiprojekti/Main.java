@@ -7,7 +7,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
         
-        System.out.println("Mitkäs sitsit on tulossa??");
+        new Thread() {
+            @Override
+            public void run() {
+                javafx.application.Application.launch(Kayttoliittyma.class);
+            }
+        }.start();
+        
+        
+        
+        /*System.out.println("Mitkäs sitsit on tulossa??");
         String sitsienNimi = lukija.nextLine();
         
         Sitsit sitsit = new Sitsit(sitsienNimi);
@@ -37,6 +46,6 @@ public class Main {
             hallinta.lisaaIlmo(uusiIlmo);
         }
         
-        hallinta.tulostaIlmot();
+        hallinta.tulostaIlmot();*/
     }
 }

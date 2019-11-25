@@ -21,7 +21,8 @@ public class IlmojenHallintaTest {
     @Before
     public void setUp() {
         sitsit = new Sitsit("testisitsit");
-        hallinta = new IlmojenHallinta(sitsit);
+        hallinta = new IlmojenHallinta();
+        hallinta.setSitsit(sitsit);
         Ilmo ilmo = new Ilmo(sitsit, new Henkilo(nimi, maili));
         nimi = "testijannu";
         maili = "testi.jannu@test.com";
@@ -29,6 +30,7 @@ public class IlmojenHallintaTest {
     
     @Test
     public void uusiIlmoRekisteroityy() {
+        //ei ajantasalla
         hallinta.lisaaIlmo(ilmo);
         assertEquals(1, hallinta.ilmojenMaara());
     }
