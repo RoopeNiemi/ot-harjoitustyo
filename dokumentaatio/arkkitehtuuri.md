@@ -1,1 +1,1 @@
-![luokkakaavio](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/kuvat/ot-luokkakaavio-projektista.jpeg)
+![luokkakaavio](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/ot-luokkakaavio-projektista.jpeg)
