@@ -5,7 +5,7 @@ Ideana on toteuttaa sovellus, joka kokoaa sitseille ilmoittautuneista ihmisistä
 
 ### Toiminnallisuudet ###
 Aluksi:
-* Näyttää tilastot:
+* Näyttää tilastot: (tehty logiikka)
   * Ilmoittautuneiden määrä
   * Ruokavaliojakauma (liha/kasvis/vegaani)
   * Juomajakauma
