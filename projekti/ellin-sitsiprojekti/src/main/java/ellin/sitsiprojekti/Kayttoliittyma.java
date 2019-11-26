@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ellin.sitsiprojekti;
 
 import java.util.ArrayList;
@@ -17,16 +13,17 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-/**
- *
- * @author kiisk
- */
 public class Kayttoliittyma extends Application {
 
     @Override
     public void start(Stage ikkuna) throws Exception {
+        
+        IlmojenHallinta hallinta = new IlmojenHallinta();
+        
+
         //ensimmäinen näkymä ja sen asettelu
         VBox asettelu1 = new VBox();
         Label nimilabel = new Label("Sitsien nimi:");
@@ -37,7 +34,7 @@ public class Kayttoliittyma extends Application {
         TextField maxOsKentta = new TextField();
         Button seuraava1 = new Button("Seuraava");
         asettelu1.getChildren().addAll(nimilabel, nimikentta, lokaatiolabel, lokaatiokentta, maxOsLabel, maxOsKentta, seuraava1);
-        Scene nakyma1 = new Scene(asettelu1);
+        Scene nakyma1 = new Scene(asettelu1, 1000, 600);
         
         //toinen näkymä ja sen asettelu
         VBox asettelu2 = new VBox();
@@ -46,7 +43,7 @@ public class Kayttoliittyma extends Application {
         kentta.setPrefSize(400, 400);
         Button seuraava2 = new Button("Seuraava");
         asettelu2.getChildren().addAll(ohje, kentta, seuraava2);
-        Scene nakyma2 = new Scene(asettelu2);
+        Scene nakyma2 = new Scene(asettelu2, 1000, 600);
         
         //kolmas näkymä ja sen asettelu
         VBox asettelu3 = new VBox();
@@ -54,8 +51,15 @@ public class Kayttoliittyma extends Application {
         asettelu3.getChildren().add(valitse);
         Button seuraava3 = new Button("Seuraava");
         ArrayList<CheckBox> boksit = new ArrayList<>();
-        Scene nakyma3 = new Scene(asettelu3);
-        IlmojenHallinta hallinta = new IlmojenHallinta();
+        Scene nakyma3 = new Scene(asettelu3, 1000, 600);
+        
+        
+        //neljäs näkymä ja sen asettelu
+        VBox asettelu4 = new VBox();
+        Label otsikko = new Label("TILASTOT");
+        ArrayList<String> tilastot = new ArrayList<>();
+        asettelu4.getChildren().add(otsikko);
+        Scene nakyma4 = new Scene(asettelu4, 1000, 600);
         
         
         seuraava1.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
@@ -78,7 +82,7 @@ public class Kayttoliittyma extends Application {
             public void handle(javafx.event.ActionEvent event) {
                 String taulukko = kentta.getText();
                 String[] otsikot = hallinta.kasitteleTaulukko(taulukko);
-                for (int i = 0; i < otsikot.length; i++) {
+                for (int i = 3; i < otsikot.length; i++) {
                     CheckBox uusiBoksi = new CheckBox(otsikot[i]);
                     boksit.add(uusiBoksi);
                     asettelu3.getChildren().add(uusiBoksi);
@@ -91,7 +95,18 @@ public class Kayttoliittyma extends Application {
         seuraava3.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                
+                for (CheckBox boksi : boksit) {
+                    if (boksi.isSelected()) {
+                        String otsikko = boksi.getText();
+                        hallinta.teeLukumaaraTilasto(otsikko);
+                        tilastot.add(hallinta.getTilasto(otsikko).toString());
+                    }
+                }
+                for (String t : tilastot) {
+                    Text tilasto = new Text(t);
+                    asettelu4.getChildren().add(tilasto);
+                }
+                ikkuna.setScene(nakyma4);
             }
         });
         

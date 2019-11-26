@@ -1,14 +1,18 @@
 
+
 package ellin.sitsiprojekti;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class IlmojenHallinta {
     private Sitsit sitsit;
     private ArrayList<Ilmo> ilmot;
+    private HashMap<String, Tilasto> tilastot;
     
     public IlmojenHallinta() {
         this.ilmot = new ArrayList<>();
+        this.tilastot = new HashMap<>();
     }
     
     public void setSitsit(Sitsit sitsit) {
@@ -29,6 +33,18 @@ public class IlmojenHallinta {
         return ilmot.size();
     }
     
+    public void teeLukumaaraTilasto(String otsikko) {
+        LukumaaraTilasto tilasto = new LukumaaraTilasto(otsikko);
+        for (Ilmo i : ilmot) {
+            tilasto.lisaaTilastoon(i.getValinta(otsikko));
+        }
+        tilastot.put(otsikko, tilasto);
+    }
+    
+    public Tilasto getTilasto(String otsikko) {
+        return tilastot.get(otsikko);
+    }
+    
     public String[] kasitteleTaulukko(String kopioitu) {
         String[] rivit = kasitteleRaakaTeksti(kopioitu);
         String[] otsikot = rivit[0].split("\t");
@@ -39,9 +55,11 @@ public class IlmojenHallinta {
             String maili = sarakkeittain[2];
             Henkilo sitsaaja = new Henkilo(nimi, maili);
             Ilmo uusiIlmo = new Ilmo(sitsit, sitsaaja);
+            
             for (int j = 3; j < otsikot.length; j++) {
                 uusiIlmo.lisaaValinta(otsikot[j], sarakkeittain[j]);
             }
+            ilmot.add(uusiIlmo);
         }
         return otsikot;
     }
@@ -68,4 +86,5 @@ public class IlmojenHallinta {
         }
         return rivit;
     }
+
 }

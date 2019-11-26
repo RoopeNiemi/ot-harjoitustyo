@@ -22,6 +22,10 @@ public class Ilmo {
         valinnat.put(vaihtoehto, valinta);
     }
     
+    public String getValinta(String otsikko) {
+        return valinnat.get(otsikko);
+    }
+    
     @Override
     public String toString() {
         String valintaLista = "";
