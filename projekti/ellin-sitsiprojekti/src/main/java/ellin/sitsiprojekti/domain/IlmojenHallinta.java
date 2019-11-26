@@ -1,6 +1,6 @@
 
 
-package ellin.sitsiprojekti;
+package ellin.sitsiprojekti.domain;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -71,8 +71,8 @@ public class IlmojenHallinta {
         for (int i = 0; i < rivit.length; i++) {
             String[] merkit = rivit[i].split("");
             for (int j = 1; j < merkit.length; j++) {
-                if (merkit[j].equals("\t") && merkit[j-1].equals("\t")) {
-                    merkit[j-1] = "\t" + "-";
+                if (merkit[j].equals("\t") && merkit[j - 1].equals("\t")) {
+                    merkit[j - 1] = "\t" + "-";
                     if (j == merkit.length - 1) {
                         merkit[j] = "\t" + "-";
                     }

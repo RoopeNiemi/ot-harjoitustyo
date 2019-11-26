@@ -1,6 +1,8 @@
 
-package ellin.sitsiprojekti;
+package ellin.sitsiprojekti.ui;
 
+import ellin.sitsiprojekti.domain.IlmojenHallinta;
+import ellin.sitsiprojekti.domain.Sitsit;
 import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.event.EventHandler;

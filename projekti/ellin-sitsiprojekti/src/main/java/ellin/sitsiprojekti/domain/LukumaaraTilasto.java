@@ -1,5 +1,5 @@
 
-package ellin.sitsiprojekti;
+package ellin.sitsiprojekti.domain;
 
 import java.util.HashMap;
 

@@ -1,5 +1,5 @@
 
-package ellin.sitsiprojekti;
+package ellin.sitsiprojekti.domain;
 
 public class Henkilo {
     private String nimi;

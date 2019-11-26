@@ -1,6 +1,7 @@
 
-package ellin.sitsiprojekti;
+package ellin.sitsiprojekti.domain;
 
+import ellin.sitsiprojekti.ui.Kayttoliittyma;
 import java.util.Scanner;
 
 public class Main {
