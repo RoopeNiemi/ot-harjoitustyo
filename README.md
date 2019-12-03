@@ -16,7 +16,7 @@ Projektiin liittyvät tiedostot ovat omassa [kansiossaan](https://github.com/ell
 [Dokumentaatio](https://github.com/ellikiiski/ot-harjoitustyo/tree/master/dokumentaatio)
 
 Komentoja:
- mvn compile exec:java -Dexec.mainClass=ellin.sitsiprojekti.domain.Main
- mvn test jacoco:report
- mvn jxr:jxr checkstyle:checkstyle'
- mvn package
+* mvn compile exec:java -Dexec.mainClass=ellin.sitsiprojekti.domain.Main
+* mvn test jacoco:report
+* mvn jxr:jxr checkstyle:checkstyle'
+* mvn package
