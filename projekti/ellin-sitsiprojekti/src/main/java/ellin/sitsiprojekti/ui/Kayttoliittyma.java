@@ -51,21 +51,20 @@ public class Kayttoliittyma extends Application {
         
         //kolmas näkymä ja sen asettelu
         VBox asettelu3 = new VBox();
-        HBox tilastoasettelu = new HBox();
+        HBox aliasettelu3 = new HBox();
         Label valitse = new Label("Valitse tilastoihin otettavat sarakkeet:");
         asettelu3.getChildren().add(valitse);
         Button seuraava3 = new Button("Seuraava");
-        ArrayList<CheckBox> boksit = new ArrayList<>();
         Scene nakyma3 = new Scene(asettelu3, 1000, 600);
         
         
         //neljäs näkymä ja sen asettelu
         VBox asettelu4 = new VBox();
-        HashMap<String, ArrayList<CheckBox>> tilastojenOtsikot = new HashMap<>();
-        tilastojenOtsikot.put("Juomatilasto", new ArrayList<>());
-        tilastojenOtsikot.put("Ruokavaliot", new ArrayList<>());
-        tilastojenOtsikot.put("Ensimmäinen fuksivuosi", new ArrayList<>());
-        tilastojenOtsikot.put("Plassi", new ArrayList<>());
+        HashMap<String, ArrayList<CheckBox>> tilastointivaihtoehdot = new HashMap<>();
+        tilastointivaihtoehdot.put("Juomatilasto", new ArrayList<>());
+        tilastointivaihtoehdot.put("Ruokavaliot", new ArrayList<>());
+        tilastointivaihtoehdot.put("Ensimmäinen fuksivuosi", new ArrayList<>());
+        tilastointivaihtoehdot.put("Plassi", new ArrayList<>());
         Label otsikko = new Label("TILASTOT");
         ArrayList<String> tilastot = new ArrayList<>();
         asettelu4.getChildren().add(otsikko);
@@ -82,7 +81,6 @@ public class Kayttoliittyma extends Application {
                 sitsit.setLokaatio(lokaatio);
                 sitsit.setMaxOsallistujamaara(maxOsallijat);
                 hallinta.setSitsit(sitsit);
-                
                 ikkuna.setScene(nakyma2);
             }
         });
@@ -92,18 +90,18 @@ public class Kayttoliittyma extends Application {
             public void handle(javafx.event.ActionEvent event) {
                 String taulukko = kentta.getText();
                 String[] otsikot = hallinta.kasitteleTaulukko(taulukko);
-                for (String tOtsikko : tilastojenOtsikot.keySet()) {
+                for (String tOtsikko : tilastointivaihtoehdot.keySet()) {
                     Label tilastonOtsikko = new Label(tOtsikko);
                     VBox valinnat = new VBox();
                     valinnat.getChildren().add(tilastonOtsikko);
                     for (int i = 3; i < otsikot.length; i++) {
                         CheckBox uusiBoksi = new CheckBox(otsikot[i]);
-                        tilastojenOtsikot.get(tOtsikko).add(uusiBoksi);
+                        tilastointivaihtoehdot.get(tOtsikko).add(uusiBoksi);
                         valinnat.getChildren().add(uusiBoksi);
                     }
-                    tilastoasettelu.getChildren().addAll(valinnat);
+                    aliasettelu3.getChildren().addAll(valinnat);
                 }
-                asettelu3.getChildren().addAll(tilastoasettelu, seuraava3);
+                asettelu3.getChildren().addAll(aliasettelu3, seuraava3);
                 ikkuna.setScene(nakyma3);
             }
         });
@@ -111,9 +109,9 @@ public class Kayttoliittyma extends Application {
         seuraava3.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                for (String tilasto : tilastojenOtsikot.keySet()) {
+                for (String tilasto : tilastointivaihtoehdot.keySet()) {
                     
-                    for (CheckBox boksi : tilastojenOtsikot.get(tilasto)) {
+                    for (CheckBox boksi : tilastointivaihtoehdot.get(tilasto)) {
                         if (boksi.isSelected()) {
                             if (tilasto.equals("Juomatilasto")) {
                                 hallinta.teeJuomatilasto(boksi.getText());
@@ -129,9 +127,7 @@ public class Kayttoliittyma extends Application {
                             }
                         }
                     }
-                    
-                }
-               
+                }               
                 for (String t : tilastot) {
                     Text tilasto = new Text(t);
                     asettelu4.getChildren().add(tilasto);
