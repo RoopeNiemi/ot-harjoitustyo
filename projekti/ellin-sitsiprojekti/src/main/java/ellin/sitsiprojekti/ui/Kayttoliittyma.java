@@ -3,7 +3,9 @@ package ellin.sitsiprojekti.ui;
 
 import ellin.sitsiprojekti.domain.IlmojenHallinta;
 import ellin.sitsiprojekti.domain.Sitsit;
+import ellin.sitsiprojekti.domain.Tilasto;
 import java.util.ArrayList;
+import java.util.HashMap;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -49,7 +51,8 @@ public class Kayttoliittyma extends Application {
         
         //kolmas näkymä ja sen asettelu
         VBox asettelu3 = new VBox();
-        Label valitse = new Label("Mistä sarakkeista tehdään tilastot: ");
+        HBox tilastoasettelu = new HBox();
+        Label valitse = new Label("Valitse tilastoihin otettavat sarakkeet:");
         asettelu3.getChildren().add(valitse);
         Button seuraava3 = new Button("Seuraava");
         ArrayList<CheckBox> boksit = new ArrayList<>();
@@ -58,6 +61,11 @@ public class Kayttoliittyma extends Application {
         
         //neljäs näkymä ja sen asettelu
         VBox asettelu4 = new VBox();
+        HashMap<String, ArrayList<CheckBox>> tilastojenOtsikot = new HashMap<>();
+        tilastojenOtsikot.put("Juomatilasto", new ArrayList<>());
+        tilastojenOtsikot.put("Ruokavaliot", new ArrayList<>());
+        tilastojenOtsikot.put("Ensimmäinen fuksivuosi", new ArrayList<>());
+        tilastojenOtsikot.put("Plassi", new ArrayList<>());
         Label otsikko = new Label("TILASTOT");
         ArrayList<String> tilastot = new ArrayList<>();
         asettelu4.getChildren().add(otsikko);
@@ -84,12 +92,18 @@ public class Kayttoliittyma extends Application {
             public void handle(javafx.event.ActionEvent event) {
                 String taulukko = kentta.getText();
                 String[] otsikot = hallinta.kasitteleTaulukko(taulukko);
-                for (int i = 3; i < otsikot.length; i++) {
-                    CheckBox uusiBoksi = new CheckBox(otsikot[i]);
-                    boksit.add(uusiBoksi);
-                    asettelu3.getChildren().add(uusiBoksi);
+                for (String tOtsikko : tilastojenOtsikot.keySet()) {
+                    Label tilastonOtsikko = new Label(tOtsikko);
+                    VBox valinnat = new VBox();
+                    valinnat.getChildren().add(tilastonOtsikko);
+                    for (int i = 3; i < otsikot.length; i++) {
+                        CheckBox uusiBoksi = new CheckBox(otsikot[i]);
+                        tilastojenOtsikot.get(tOtsikko).add(uusiBoksi);
+                        valinnat.getChildren().add(uusiBoksi);
+                    }
+                    tilastoasettelu.getChildren().addAll(valinnat);
                 }
-                asettelu3.getChildren().add(seuraava3);
+                asettelu3.getChildren().addAll(tilastoasettelu, seuraava3);
                 ikkuna.setScene(nakyma3);
             }
         });
@@ -97,13 +111,27 @@ public class Kayttoliittyma extends Application {
         seuraava3.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                for (CheckBox boksi : boksit) {
-                    if (boksi.isSelected()) {
-                        String otsikko = boksi.getText();
-                        hallinta.teeLukumaaraTilasto(otsikko);
-                        tilastot.add(hallinta.getTilasto(otsikko).toString());
+                for (String tilasto : tilastojenOtsikot.keySet()) {
+                    
+                    for (CheckBox boksi : tilastojenOtsikot.get(tilasto)) {
+                        if (boksi.isSelected()) {
+                            if (tilasto.equals("Juomatilasto")) {
+                                hallinta.teeJuomatilasto(boksi.getText());
+                                tilastot.add(hallinta.getTilasto(boksi.getText()).toString());
+                            } else if (tilasto.equals("Ruokavaliot")) {
+                                hallinta.teeRuokavaliotilasto(boksi.getText());
+                                tilastot.add(hallinta.getTilasto(boksi.getText()).toString());
+                            } else if (tilasto.equals("Ensimmäinen fuksivuosi")) {
+                                hallinta.laskeEkaFuksivuosi(boksi.getText());
+                                tilastot.add(hallinta.getTilasto(boksi.getText()).toString());
+                            } else if (tilasto.equals("Plassi")) {
+                                System.out.println("Plassiominaisuus ei vielä käytössä");
+                            }
+                        }
                     }
+                    
                 }
+               
                 for (String t : tilastot) {
                     Text tilasto = new Text(t);
                     asettelu4.getChildren().add(tilasto);

@@ -33,8 +33,24 @@ public class IlmojenHallinta {
         return ilmot.size();
     }
     
-    public void teeLukumaaraTilasto(String otsikko) {
-        LukumaaraTilasto tilasto = new LukumaaraTilasto(otsikko);
+    public void teeJuomatilasto(String otsikko) {
+        Juomatilasto tilasto = new Juomatilasto(otsikko);
+        for (Ilmo i : ilmot) {
+            tilasto.lisaaTilastoon(i.getValinta(otsikko));
+        }
+        tilastot.put(otsikko, tilasto);
+    }
+    
+    public void teeRuokavaliotilasto(String otsikko) {
+        Ruokavaliotilasto tilasto = new Ruokavaliotilasto(otsikko);
+        for (Ilmo i : ilmot) {
+            tilasto.lisaaTilastoon(i.getValinta(otsikko));
+        }
+        tilastot.put(otsikko, tilasto);
+    }
+    
+    public void laskeEkaFuksivuosi(String otsikko) {
+        EkaFuksivuosiTilasto tilasto = new EkaFuksivuosiTilasto();
         for (Ilmo i : ilmot) {
             tilasto.lisaaTilastoon(i.getValinta(otsikko));
         }

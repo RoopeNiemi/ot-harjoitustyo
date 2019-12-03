@@ -3,11 +3,11 @@ package ellin.sitsiprojekti.domain;
 
 import java.util.HashMap;
 
-public class LukumaaraTilasto implements Tilasto {
+public class Juomatilasto implements Tilasto {
     private String otsikko;
     private HashMap<String, Integer> valinnat;
     
-    public LukumaaraTilasto(String otsikko) {
+    public Juomatilasto(String otsikko) {
         this.otsikko = otsikko;
         this.valinnat = new HashMap<>();
     }
