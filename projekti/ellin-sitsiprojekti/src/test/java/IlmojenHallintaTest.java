@@ -40,5 +40,9 @@ public class IlmojenHallintaTest {
         assertEquals(2, hallinta.ilmojenMaara());
     }
     
-    
+    public void tilastojenTekoOnnistuu() {
+        hallinta.teeJuomatilasto(otsikot[3]);
+        hallinta.teeRuokavaliotilasto(otsikot[5]);
+        assertEquals(2, hallinta.getTilastojenMaara());
+    }
 }

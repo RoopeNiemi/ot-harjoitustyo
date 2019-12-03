@@ -61,6 +61,10 @@ public class IlmojenHallinta {
         return tilastot.get(otsikko);
     }
     
+    public int getTilastojenMaara() {
+        return this.tilastot.size();
+    }
+    
     public String[] kasitteleTaulukko(String kopioitu) {
         String[] rivit = kasitteleRaakaTeksti(kopioitu);
         String[] otsikot = rivit[0].split("\t");
