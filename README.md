@@ -14,3 +14,9 @@ Projektiin liittyvät tiedostot ovat omassa [kansiossaan](https://github.com/ell
 [PROJEKTI: sitsiyhteenveto](https://github.com/ellikiiski/ot-harjoitustyo/tree/master/projekti/ellin-sitsiprojekti)
 
 [Dokumentaatio](https://github.com/ellikiiski/ot-harjoitustyo/tree/master/dokumentaatio)
+
+Komentoja:
+ mvn compile exec:java -Dexec.mainClass=ellin.sitsiprojekti.domain.Main
+ mvn test jacoco:report
+ mvn jxr:jxr checkstyle:checkstyle'
+ mvn package
