@@ -18,6 +18,10 @@ public class EkaFuksivuosiTilasto implements Tilasto {
         }
         eka = Math.min(eka, vuosiLukuna);
     }
+
+    public int getEkaFuksivuosi() {
+        return eka;
+    }    
     
     @Override
     public String toString() {

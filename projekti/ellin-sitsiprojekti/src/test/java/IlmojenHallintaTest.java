@@ -45,4 +45,10 @@ public class IlmojenHallintaTest {
         hallinta.teeRuokavaliotilasto(otsikot[5]);
         assertEquals(2, hallinta.getTilastojenMaara());
     }
+    
+    public void ekaFuksivuosiOikein() {
+        hallinta.kasitteleTaulukko(taulukko);
+        hallinta.laskeEkaFuksivuosi("Ensimmäinen fuksivuosi");
+        assertEquals("Ensimmäinen fuksivuosi: 1998", hallinta.getTilasto("Ensimmäinen fuksivuosi").toString());
+    }
 }
