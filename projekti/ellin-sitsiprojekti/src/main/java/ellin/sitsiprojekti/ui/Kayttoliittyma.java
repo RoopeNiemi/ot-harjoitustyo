@@ -25,6 +25,14 @@ public class Kayttoliittyma extends Application {
     @Override
     public void start(Stage ikkuna) throws Exception {
         
+        String esimerkki = "TÄSTÄ VOIT KOPIOIDA ESIMERKKITAULUKON TESTAUKSEEN:\n\n" +
+            "#	nimi	säpo	viini	viina	ruoka	vuosi\n" +
+            "1	elli	e@g.fi	punkku	jallu		2017\n" +
+            "2	saku	s@g.fi	valkkari	jallu		2017\n" +
+            "3	eero	ee@g.fi	punkku	punssi		2015\n" +
+            "4	aleksi	a@g.fi	valkkari	jallu		2016\n" +
+            "5	mira	m@g.fi	valkkari	jallu	en syö mitään	2017";
+        
         IlmojenHallinta hallinta = new IlmojenHallinta();
         
 
@@ -46,7 +54,8 @@ public class Kayttoliittyma extends Application {
         TextArea kentta = new TextArea();
         kentta.setPrefSize(400, 400);
         Button seuraava2 = new Button("Seuraava");
-        asettelu2.getChildren().addAll(ohje, kentta, seuraava2);
+        TextArea esimerkkiTaulukko = new TextArea(esimerkki);
+        asettelu2.getChildren().addAll(ohje, kentta, seuraava2, esimerkkiTaulukko);
         Scene nakyma2 = new Scene(asettelu2, 1000, 600);
         
         //kolmas näkymä ja sen asettelu
