@@ -23,12 +23,6 @@ public class IlmojenHallinta {
         ilmot.add(ilmo);
     }
     
-    public void tulostaIlmot() {
-        for (Ilmo i : ilmot) {
-            System.out.println(i);
-        }
-    }
-    
     public int ilmojenMaara() {
         return ilmot.size();
     }
