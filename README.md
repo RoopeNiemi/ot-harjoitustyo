@@ -18,5 +18,5 @@ Projektiin liittyvät tiedostot ovat omassa [kansiossaan](https://github.com/ell
 Komentoja:
 * mvn compile exec:java -Dexec.mainClass=ellin.sitsiprojekti.domain.Main
 * mvn test jacoco:report
-* mvn jxr:jxr checkstyle:checkstyle'
+* mvn jxr:jxr checkstyle:checkstyle
 * mvn package
