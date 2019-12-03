@@ -5,12 +5,12 @@ Ideana on toteuttaa sovellus, joka kokoaa sitseille ilmoittautuneista ihmisistä
 
 ### Toiminnallisuudet ###
 Aluksi:
-* Näyttää tilastot: (tehty logiikka)
-  * Ilmoittautuneiden määrä
-  * Ruokavaliojakauma (liha/kasvis/vegaani)
-  * Juomajakauma
-  * Ensimmäinen ensimmäinen fuksivuosi
-  * Erityisruokavaliot
+* Näyttää tilastot:
+  * Ilmoittautuneiden määrä (tehty)
+  * Ruokavaliojakauma (liha/kasvis/vegaani) (tehty osittain)
+  * Juomajakauma (tehty)
+  * Ensimmäinen ensimmäinen fuksivuosi (tehty)
+  * Erityisruokavaliot (tehty eka versio)
   * ...
 * Kokoaa yhteen tiedot kunkin juoman menekistä, ts. laskee kuinka paljon kutakin juomaa tarvitsee ostaa
 
