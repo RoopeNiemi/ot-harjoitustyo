@@ -1,6 +1,8 @@
 # **OHJELMISTOTEKNIIKKA 2019**
 
 ## *PROJEKTITYÖ*
+Projektityön on tarkoitus tehdä tilastot sitsijuomista, ruuista ja muista relevanteista asioista. Toivon mukaan myös plassitoiminto onnistuu loppukurssista.
+
 Projektiin liittyvät tiedostot ovat omassa [kansiossaan](https://github.com/ellikiiski/ot-harjoitustyo/tree/master/projekti).
 
 [RELEASE viikko 5](https://github.com/ellikiiski/ot-harjoitustyo/releases/tag/viikko5)
