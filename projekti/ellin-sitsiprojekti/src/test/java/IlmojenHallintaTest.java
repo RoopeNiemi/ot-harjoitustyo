@@ -35,17 +35,20 @@ public class IlmojenHallintaTest {
         assertEquals(otsikot[0], kasiteltyTaulukko[0]);
     }
     
+    @Test
     public void ilmojenMaaraOnOikein() {
         hallinta.kasitteleTaulukko(taulukko);
         assertEquals(2, hallinta.ilmojenMaara());
     }
     
+    @Test
     public void tilastojenTekoOnnistuu() {
         hallinta.teeJuomatilasto(otsikot[3]);
         hallinta.teeRuokavaliotilasto(otsikot[5]);
         assertEquals(2, hallinta.getTilastojenMaara());
     }
     
+    @Test
     public void ekaFuksivuosiOikein() {
         hallinta.kasitteleTaulukko(taulukko);
         hallinta.laskeEkaFuksivuosi("Ensimmäinen fuksivuosi");
