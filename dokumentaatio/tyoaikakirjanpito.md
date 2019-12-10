@@ -7,4 +7,4 @@
 | 26.11. | 6    | graafisen käyttöliittymän luonti ja ensimmäiset tilastot |
 | 03.12. | 8    | graafisen käyttöliittymän parantelu ja uusien tilastomuotojen teko |
 | 10.12. | 10    | pään hakkaamista seinään tietokantojen ja koko projektin kanssa |
-| YHT.   | 29   | 
+| YHT.   | 31   | 
