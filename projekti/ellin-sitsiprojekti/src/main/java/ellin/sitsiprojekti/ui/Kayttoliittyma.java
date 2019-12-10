@@ -136,10 +136,11 @@ public class Kayttoliittyma extends Application {
                             }
                         }
                     }
-                }               
+                }
+                asettelu4.getChildren().add(new Text("\n"));
                 for (String t : tilastot) {
                     Text tilasto = new Text(t);
-                    asettelu4.getChildren().add(tilasto);
+                    asettelu4.getChildren().addAll(tilasto, new Text("\n"));
                 }
                 ikkuna.setScene(nakyma4);
             }

@@ -14,7 +14,7 @@ public class Ruokavaliotilasto implements Tilasto {
     
     @Override
     public void lisaaTilastoon(String ruokavalio) {
-        if (!ruokavalio.contains("-")) {
+        if (!ruokavalio.equals("-")) {
             ruokavaliot.add(ruokavalio);
         }
     }

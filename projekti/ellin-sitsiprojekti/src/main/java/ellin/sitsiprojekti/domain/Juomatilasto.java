@@ -20,6 +20,10 @@ public class Juomatilasto implements Tilasto {
         int maara = valinnat.get(valinta) + 1;
         valinnat.put(valinta, maara);
     }
+    
+    public int maara(String juoma) {
+        return valinnat.get(juoma);
+    }
 
     @Override
     public String toString() {
