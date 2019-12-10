@@ -7,9 +7,11 @@ Projektiin liittyvät tiedostot ovat omassa [kansiossaan](https://github.com/ell
 
 [RELEASE viikko 5](https://github.com/ellikiiski/ot-harjoitustyo/releases/tag/viikko5)
 
-[Työaikakirjanpito](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/projekti/tyoaikakirjanpito.md)
+[Työaikakirjanpito](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
-[Vaatimusmäärittely](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/projekti/vaatimusmaarittely.md)
+[Vaatimusmäärittely](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+[Luokkakaavio (arkkutehtuuri)](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 [PROJEKTI: sitsiyhteenveto](https://github.com/ellikiiski/ot-harjoitustyo/tree/master/projekti/ellin-sitsiprojekti)
 
