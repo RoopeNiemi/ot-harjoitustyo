@@ -1,4 +1,4 @@
-## Vaativuusmäärittely ##
+## Määrittelydokumentti ##
 
 ### Sitsisovelluksen tarkoitus ###
 Sitsisovelluksen ideana on koota kätevästi sitseihin liittyviä tilastoja käyttäjän nähtäväksi, eli säästää näin sitsien järjestäjän aikaa. Sovellust toimii siten, että Matrixin nettisivuilta kopioidaan ilmoittautuneiden lista (johon tosin pääsee käsiksi vain edmis-oikeuksilla), jonka jälkeen sovellus kokoaa siitä käyttäjän avustuksella hyödyllisiä tilastoja.
