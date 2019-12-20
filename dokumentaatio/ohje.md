@@ -16,7 +16,7 @@ Sovellus on tarkoitettu käytettäväksi siten, että Matrixin nettisivujen admi
 4	aleksi	a@g.fi	valkkari	jallu		2016
 5	mira	m@g.fi	valkkari	jallu	en syö mitään	2017
 6	emma	em@g.fi	valkkari	jallu		ei
-7	nalle	n@g.fi	punkku	jallu	tupla-annokset kiitos 2017
+7	nalle	n@g.fi	punkku	jallu	tupla-annokset kiitos	2017
 8	paukkis	p@g.fi	valkkari	kossu	vegaani	2016
 9	kia	k@g.fi	valkkari	jallu	kasvis	2017</pre>
 
