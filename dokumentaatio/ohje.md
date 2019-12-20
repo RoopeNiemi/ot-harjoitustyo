@@ -20,4 +20,8 @@ Sovellus on tarkoitettu käytettäväksi siten, että Matrixin nettisivujen admi
 8	paukkis	p@g.fi	valkkari	kossu	vegaani	2016
 9	kia	k@g.fi	valkkari	jallu	kasvis	2017</pre>
 
+Seuraavassa näkymässä valitse mistä taulukon sarakkeista haluat tehdä minkäkin tilaston. Oleellisesti siis esimerkkitaulukon tupauksessa järkevää olisi valita juomatilastoon viini ja viina, ruokavaliotilastoon ruoka, ja ensimmäisen fuksivuoden laskemiseen vuosisarake.
 
+Nyt seuraavassa näkymässä voit juomamenekin laskeaksesi merkitä kuinka paljon kutakin juomaa sitseillä tarjoillaan per sitsaaja (Huom! kirjoita pelkkiä numeroita), sekä klikkailla kunkin erityisruokavalion kohdalta boksin, joka kuvaa kyseistä mainintaa parhaiten. Ohjeet löytyy myös itse näkymästä.
+
+Viimeisessä näkymässä onkin sitten koottuna kaikki tilastot: juomien menekki, kasvisruokavalioistan lukumäärä, vegaanien lukumäärä, lueteltuna muut erityisruokavaliot sekä alimpana esimmäinen fuksivuosi.
