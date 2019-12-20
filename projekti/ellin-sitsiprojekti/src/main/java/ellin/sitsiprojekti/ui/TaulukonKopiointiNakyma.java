@@ -9,7 +9,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
 
 public class TaulukonKopiointiNakyma implements Nakyma {
-    private VBox asettelu;;
+    
+    private VBox asettelu;
     private Button seuraava;
     private TextArea kentta;
     private Scene nakyma;

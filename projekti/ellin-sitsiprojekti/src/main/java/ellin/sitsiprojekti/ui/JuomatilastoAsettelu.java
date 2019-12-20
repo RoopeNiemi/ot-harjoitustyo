@@ -29,7 +29,7 @@ public class JuomatilastoAsettelu {
         this.asettelu.getChildren().addAll(aliasettelu);
         Juomatilasto jt = new Juomatilasto(hallinta, otsikko);
         for (String juoma : jt.getMaarat().keySet()) {
-            this.juomienNimet.add(new Label(juoma +": " + jt.getMaarat().get(juoma)));
+            this.juomienNimet.add(new Label(juoma + ": " + jt.getMaarat().get(juoma)));
             kertoimetJaJuomat.get(kentta).put(juoma, jt.getMaarat().get(juoma));
         }
         for (Label label : juomienNimet) {
