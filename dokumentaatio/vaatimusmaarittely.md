@@ -8,7 +8,7 @@ Sitsisovelluksen ideana on koota kätevästi sitseihin liittyviä tilastoja käy
 * Näyttää raakaversiot tilastoista:
   * Kaikki mainitut erityisruokavaliot
   * Juomajakauma: kuinka monta kpl mitäkin juomaa on valittu
-* Kokoaa yhteen käyttäjän syöttämien tietojen (esim. tietyn juoman tilavuus per sitsaaja) perusteella, kuinka paljon mitäkin juomaa täytyy sitsejä varten ostaa, kuinka monta kasvisruokavalioista ja vegaania sitseille osallistuu sekä mitä muita erikoisruokavalioita kahden edellisen lisäksi sitsaajilta löytyy.
+* Kokoaa yhteen käyttäjän syöttämien tietojen (esim. tietyn juoman tilavuus per sitsaaja) perusteella, mikä on akateemisesti vanhimman sitsaajan ensimmäinen fuksivuosi, kuinka paljon mitäkin juomaa täytyy sitsejä varten ostaa, kuinka monta kasvisruokavalioista ja vegaania sitseille osallistuu sekä mitä muita erikoisruokavalioita kahden edellisen lisäksi sitsaajilta löytyy.
 
 Jatkokehitettävääkin sovellukselle löytyy, sillä siihen voisi lisätä vielä toiminnon, joka loisi istumajärjestysehdotuksen ilmoittautumistaulukon istumapaikkatoiveiden pohjalta. Siihen ei kuitenkaan aika vielä tämän kurssin puitteissa riittänyt.
 
