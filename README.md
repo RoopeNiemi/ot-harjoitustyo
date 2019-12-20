@@ -1,7 +1,7 @@
 # **OHJELMISTOTEKNIIKKA 2019**
 
-## *PROJEKTITYÖ*
-Projektityön on tarkoitus tehdä tilastot sitsijuomista, ruuista ja muista relevanteista asioista. Toivon mukaan myös plassitoiminto onnistuu loppukurssista.
+## *PROJEKTITYÖ - Sitsienjärjestysapulainen*
+Ohjelma, joka kerää suoraan Matrixin nettisivuilta kopioidusta taulukosta tarvittavat tiedot ja kokoaa niistä käyttäjän haluamat tilastot.
 
 ### [Dokumentaatio](https://github.com/ellikiiski/ot-harjoitustyo/tree/master/dokumentaatio) ###
 
