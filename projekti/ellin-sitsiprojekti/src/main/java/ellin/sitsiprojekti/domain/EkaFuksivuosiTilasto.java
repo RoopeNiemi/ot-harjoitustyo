@@ -26,12 +26,5 @@ public class EkaFuksivuosiTilasto implements Tilasto {
 
     public int getEkaFuksivuosi() {
         return eka;
-    }    
-    
-    @Override
-    public String toString() {
-        String tilasto = "Ensimmäinen fuksivuosi: " + eka;
-        return tilasto;
     }
-    
 }

@@ -2,13 +2,10 @@
 package ellin.sitsiprojekti.ui;
 
 import ellin.sitsiprojekti.domain.IlmojenHallinta;
-import ellin.sitsiprojekti.domain.Juomatilasto;
 import java.util.ArrayList;
-import java.util.HashMap;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -22,7 +19,6 @@ public class KaikkiTilastotNakyma implements Nakyma {
     private VBox ekaFuksiTilasto;
     private Button seuraava;
     private Scene nakyma;
-    
     private ArrayList<JuomatilastoAsettelu> juomatilastotListana;
     private RuokatilastoAsettelu ruokatilastoAsetteluna;
     private EkaFuksivuosiAsettelu ekaFuksivuosiAsetteluna;

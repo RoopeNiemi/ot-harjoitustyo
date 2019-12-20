@@ -1,15 +1,12 @@
 
 package ellin.sitsiprojekti.ui;
 
-import ellin.sitsiprojekti.domain.Ilmo;
 import ellin.sitsiprojekti.domain.IlmojenHallinta;
 import java.util.ArrayList;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 
 public class TilastojenValintaNakyma implements Nakyma {
     private IlmojenHallinta hallinta;
@@ -25,7 +22,6 @@ public class TilastojenValintaNakyma implements Nakyma {
         Label ohje = new Label(ohjeteksti);
         this.seuraava = new Button("Seuraava");
         this.asettelu.getChildren().addAll(ohje, seuraava);
-
         this.nakyma = new Scene(asettelu, 1000, 600);
     }
     

@@ -2,21 +2,9 @@
 package ellin.sitsiprojekti.ui;
 
 import ellin.sitsiprojekti.domain.IlmojenHallinta;
-import ellin.sitsiprojekti.domain.Tilasto;
-import java.util.ArrayList;
-import java.util.HashMap;
 import javafx.application.Application;
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Kayttoliittyma extends Application {
@@ -24,18 +12,8 @@ public class Kayttoliittyma extends Application {
     @Override
     public void start(Stage ikkuna) throws Exception {
         
-        String esimerkki = "TÄSTÄ VOIT KOPIOIDA ESIMERKKITAULUKON TESTAUKSEEN:\n\n" +
-            "#	nimi	säpo	viini	viina	ruoka	vuosi\n" +
-            "1	elli	e@g.fi	punkku	jallu		2017\n" +
-            "2	saku	s@g.fi	valkkari	jallu		2017\n" +
-            "3	eero	ee@g.fi	punkku	punssi		2015\n" +
-            "4	aleksi	a@g.fi	valkkari	jallu		2016\n" +
-            "5	mira	m@g.fi	valkkari	jallu	en syö mitään	2017";
-        
         IlmojenHallinta hallinta = new IlmojenHallinta();
         
-
-        //näkymien alustus
         TaulukonKopiointiNakyma nakyma1 = new TaulukonKopiointiNakyma(hallinta, "Kopioi tähän matrixin nettisivujen ilmoittautujalista:");
         TilastojenValintaNakyma nakyma2 = new TilastojenValintaNakyma(hallinta, "Valitse tilastoihin otettavat sarakkeet:");
         KaikkiTilastotNakyma nakyma3 = new KaikkiTilastotNakyma(hallinta);

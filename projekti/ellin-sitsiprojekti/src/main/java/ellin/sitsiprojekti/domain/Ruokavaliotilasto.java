@@ -27,14 +27,4 @@ public class Ruokavaliotilasto implements Tilasto {
     public ArrayList<String> getRuokavaliot() {
         return this.ruokavaliot;
     }
-    
-    @Override
-    public String toString() {
-        String tilasto = this.otsikko;
-        for (String rv : ruokavaliot) {
-            tilasto += "\n" + rv;
-        }
-        return tilasto;
-    }
-    
 }

@@ -1,8 +1,9 @@
+package ellin.sitsiprojekti.test;
+
 
 import ellin.sitsiprojekti.domain.Henkilo;
 import ellin.sitsiprojekti.domain.Ilmo;
 import ellin.sitsiprojekti.domain.IlmojenHallinta;
-import ellin.sitsiprojekti.domain.Sitsit;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -11,22 +12,30 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class IlmojenHallintaTest {
-    
-    Sitsit sitsit;
+
     IlmojenHallinta hallinta;
-    Ilmo ilmo;
     String taulukko;
     String[] otsikot;
     
     @Before
     public void setUp() {
-        sitsit = new Sitsit("testisitsit");
         hallinta = new IlmojenHallinta();
-        hallinta.setSitsit(sitsit);
         taulukko = "#\tNimi\tSähköposti\tViini\tViina\tErityisruokavalio\tEnsimmäinen fuksivuosi"
-                + "\n1.\tArhippa\ta.p@gmail.com\tPunkku\tKossu\tEn syö paprikaa\t2010"
+                + "\n1.\tArhippa\ta.p@gmail.com\tPunkku\tKossu\t\t2010"
                 + "\n2.\tAito-Iisakki Jimmynpoika\taito@jumalanterve.fi\tValkkari\tHoliton\tVegaani\t1998";
         otsikot = new String[] {"#", "Nimi", "Sähköposti", "Viini", "Viina", "Erityisruokavalio", "Ensimmäinen fuksivuosi"};
+    }
+    
+    @Test
+    public void kasitteleRaakaTekstiPoistaaTuplatabulaattorit() {
+        boolean test = true;
+        String[] kasitelty = hallinta.kasitteleRaakaTeksti(taulukko);
+        for (int i = 0; i < kasitelty.length; i++) {
+            if (kasitelty[i].contains("\t\t")) {
+                test = false;
+            }
+        }
+        assertTrue(test);
     }
     
     @Test
@@ -36,22 +45,17 @@ public class IlmojenHallintaTest {
     }
     
     @Test
-    public void ilmojenMaaraOnOikein() {
+    public void getIlmotPalauttaaOikeanKokoisenListan() {
         hallinta.kasitteleTaulukko(taulukko);
-        assertEquals(2, hallinta.ilmojenMaara());
+        int ilmojenMaara = hallinta.getIlmot().size();
+        assertEquals(2, ilmojenMaara);
     }
     
     @Test
-    public void tilastojenTekoOnnistuu() {
-        hallinta.teeJuomatilasto(otsikot[3]);
-        hallinta.teeRuokavaliotilasto(otsikot[5]);
-        assertEquals(2, hallinta.getTilastojenMaara());
-    }
-    
-    @Test
-    public void ekaFuksivuosiOikein() {
+    public void ilmonGetValintaPalauttaaOikean() {
         hallinta.kasitteleTaulukko(taulukko);
-        hallinta.laskeEkaFuksivuosi("Ensimmäinen fuksivuosi");
-        assertEquals("Ensimmäinen fuksivuosi: 1998", hallinta.getTilasto("Ensimmäinen fuksivuosi").toString());
+        Ilmo i = hallinta.getIlmot().get(0);
+        String viinaValinta = i.getValinta("Viina");
+        assertEquals("Kossu", viinaValinta);
     }
 }

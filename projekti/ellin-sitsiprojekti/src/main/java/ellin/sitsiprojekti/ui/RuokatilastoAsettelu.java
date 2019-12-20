@@ -2,13 +2,11 @@
 package ellin.sitsiprojekti.ui;
 
 import ellin.sitsiprojekti.domain.IlmojenHallinta;
-import ellin.sitsiprojekti.domain.Juomatilasto;
 import ellin.sitsiprojekti.domain.Ruokavaliotilasto;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 

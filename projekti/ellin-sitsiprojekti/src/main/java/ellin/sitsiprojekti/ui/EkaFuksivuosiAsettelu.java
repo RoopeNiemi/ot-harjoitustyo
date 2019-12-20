@@ -3,7 +3,6 @@ package ellin.sitsiprojekti.ui;
 
 import ellin.sitsiprojekti.domain.EkaFuksivuosiTilasto;
 import ellin.sitsiprojekti.domain.IlmojenHallinta;
-import ellin.sitsiprojekti.domain.Ruokavaliotilasto;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 

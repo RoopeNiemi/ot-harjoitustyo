@@ -5,17 +5,14 @@ import ellin.sitsiprojekti.domain.IlmojenHallinta;
 import ellin.sitsiprojekti.domain.Juomatilasto;
 import java.util.ArrayList;
 import java.util.HashMap;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 
 public class JuomatilastoAsettelu {
     private VBox asettelu;
     private ArrayList<Label> juomienNimet;
-    
     private HashMap<TextField, HashMap<String, Integer>> kertoimetJaJuomat;
     
     public JuomatilastoAsettelu(IlmojenHallinta hallinta, String otsikko) {
