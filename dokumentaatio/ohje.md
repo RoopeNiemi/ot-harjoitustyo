@@ -9,7 +9,7 @@ Lataa jar-tiedosto koneellesi ja käynnistä ohjelma.
 
 Sovellus on tarkoitettu käytettäväksi siten, että Matrixin nettisivujen admin-käyttäjä kopioi sitsien tapahtumasivulta taulukon ilmoittautuneista. Koska mitä ilmeisimmin sinulla, hyvä lukija, ei sellaisia ole, voit käyttää seuraavaa taulukkoa testaukseen:
 
-#	nimi	säpo	viini	viina	ruoka	vuosi
+<pre>#	nimi	säpo	viini	viina	ruoka	vuosi
 1	elli	e@g.fi	punkku	jallu		2017
 2	saku	s@g.fi	valkkari	jallu		2017
 3	eero	ee@g.fi	punkku	punssi		2015
@@ -18,6 +18,6 @@ Sovellus on tarkoitettu käytettäväksi siten, että Matrixin nettisivujen admi
 6 emma  em@g.fi valkkari  jallu   ei
 7 nalle n@g.fi  punkku  jallu tupla-annokset kiitos 2017
 8 paukkis p@g.fi  valkkari  kossu vegaani 2016
-9 kia k@g.fi  valkkari  jallu kasvis  2017
+9 kia k@g.fi  valkkari  jallu kasvis  2017<\pre>
 
 
