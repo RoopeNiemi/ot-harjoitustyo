@@ -4,12 +4,17 @@ package ellin.sitsiprojekti.domain;
 import java.util.HashMap;
 
 public class Juomatilasto implements Tilasto {
+    private IlmojenHallinta hallinta;
     private String otsikko;
     private HashMap<String, Integer> valinnat;
     
-    public Juomatilasto(String otsikko) {
+    public Juomatilasto(IlmojenHallinta hallinta, String otsikko) {
+        this.hallinta = hallinta;
         this.otsikko = otsikko;
         this.valinnat = new HashMap<>();
+        for (Ilmo i : hallinta.getIlmot()) {
+            this.lisaaTilastoon(i.getValinta(otsikko));
+        }        
     }
 
     @Override
@@ -23,6 +28,10 @@ public class Juomatilasto implements Tilasto {
     
     public int maara(String juoma) {
         return valinnat.get(juoma);
+    }
+    
+    public HashMap<String, Integer> getMaarat() {
+        return this.valinnat;
     }
 
     @Override

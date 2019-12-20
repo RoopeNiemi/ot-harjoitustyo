@@ -1,37 +1,37 @@
 
 package ellin.sitsiprojekti.domain;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Ilmo {
-    private Sitsit sitsit;
     private Henkilo henkilo;
-    private HashMap<String, String> valinnat;
+    private ArrayList<Valinta> valinnat;
     
-    public Ilmo(Sitsit sitsit, Henkilo henkilo) {
-        this.sitsit = sitsit;
+    public Ilmo(Henkilo henkilo) {
         this.henkilo = henkilo;
-        valinnat = new HashMap<>();
-    }
-    
-    public void lisaaVaihtoehto(String vaihtoehto) {
-        valinnat.put(vaihtoehto, "");
+        valinnat = new ArrayList<>();
     }
     
     public void lisaaValinta(String vaihtoehto, String valinta) {
-        valinnat.put(vaihtoehto, valinta);
+        valinnat.add(new Valinta(vaihtoehto, valinta));
     }
     
     public String getValinta(String otsikko) {
-        return valinnat.get(otsikko);
+        for (Valinta valinta : valinnat) {
+            if (!valinta.getValinta(otsikko).equals("")) {
+                return valinta.getValinta(otsikko);
+            }
+        }
+        return "";
     }
     
-    @Override
+    /*@Override
     public String toString() {
         String valintaLista = "";
         for (String valinta : valinnat.values()) {
             valintaLista += valinta + " ";
         }
-        return this.henkilo + " on ilmonnut sitseille " + this.sitsit + " ja valinnut: " + valintaLista;
-    }
+        return this.henkilo + " on ilmonnut sitseille ja valinnut: " + valintaLista;
+    }*/
 }

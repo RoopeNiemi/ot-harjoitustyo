@@ -6,57 +6,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class IlmojenHallinta {
-    private Sitsit sitsit;
     private ArrayList<Ilmo> ilmot;
-    private HashMap<String, Tilasto> tilastot;
+    //private Juomatilasto juomatilasto;
+    //private Ruokavaliotilasto ruokatilasto;
+    //private EkaFuksivuosiTilasto ekafuksitilasto;
     
     public IlmojenHallinta() {
         this.ilmot = new ArrayList<>();
-        this.tilastot = new HashMap<>();
-    }
-    
-    public void setSitsit(Sitsit sitsit) {
-        this.sitsit = sitsit;
-    }
-    
-    public void lisaaIlmo(Ilmo ilmo) {
-        ilmot.add(ilmo);
     }
     
     public int ilmojenMaara() {
         return ilmot.size();
     }
-    
-    public void teeJuomatilasto(String otsikko) {
-        Juomatilasto tilasto = new Juomatilasto(otsikko);
-        for (Ilmo i : ilmot) {
-            tilasto.lisaaTilastoon(i.getValinta(otsikko));
-        }
-        tilastot.put(otsikko, tilasto);
-    }
-    
-    public void teeRuokavaliotilasto(String otsikko) {
-        Ruokavaliotilasto tilasto = new Ruokavaliotilasto(otsikko);
-        for (Ilmo i : ilmot) {
-            tilasto.lisaaTilastoon(i.getValinta(otsikko));
-        }
-        tilastot.put(otsikko, tilasto);
-    }
-    
-    public void laskeEkaFuksivuosi(String otsikko) {
-        EkaFuksivuosiTilasto tilasto = new EkaFuksivuosiTilasto();
-        for (Ilmo i : ilmot) {
-            tilasto.lisaaTilastoon(i.getValinta(otsikko));
-        }
-        tilastot.put(otsikko, tilasto);
-    }
-    
-    public Tilasto getTilasto(String otsikko) {
-        return tilastot.get(otsikko);
-    }
-    
-    public int getTilastojenMaara() {
-        return this.tilastot.size();
+
+    public ArrayList<Ilmo> getIlmot() {
+        return ilmot;
     }
     
     public String[] kasitteleTaulukko(String kopioitu) {
@@ -68,7 +32,7 @@ public class IlmojenHallinta {
             String nimi = sarakkeittain[1];
             String maili = sarakkeittain[2];
             Henkilo sitsaaja = new Henkilo(nimi, maili);
-            Ilmo uusiIlmo = new Ilmo(sitsit, sitsaaja);
+            Ilmo uusiIlmo = new Ilmo(sitsaaja);
             
             for (int j = 3; j < otsikot.length; j++) {
                 uusiIlmo.lisaaValinta(otsikot[j], sarakkeittain[j]);

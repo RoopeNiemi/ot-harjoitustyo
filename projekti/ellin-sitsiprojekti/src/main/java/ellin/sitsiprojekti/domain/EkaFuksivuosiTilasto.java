@@ -2,11 +2,16 @@
 package ellin.sitsiprojekti.domain;
 
 public class EkaFuksivuosiTilasto implements Tilasto {
+    private IlmojenHallinta hallinta;
     private int eka;
     
-    public EkaFuksivuosiTilasto() {
+    public EkaFuksivuosiTilasto(IlmojenHallinta hallinta, String otsikko) {
+        this.hallinta = hallinta;
         this.eka = 2100;
-    }
+        for (Ilmo i : hallinta.getIlmot()) {
+            this.lisaaTilastoon(i.getValinta(otsikko));
+        }
+    }    
     
     @Override
     public void lisaaTilastoon(String vuosi) {
