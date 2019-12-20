@@ -26,22 +26,7 @@ public class Juomatilasto implements Tilasto {
         valinnat.put(valinta, maara);
     }
     
-    public int maara(String juoma) {
-        return valinnat.get(juoma);
-    }
-    
     public HashMap<String, Integer> getMaarat() {
         return this.valinnat;
     }
-
-    @Override
-    public String toString() {
-        String tilasto = this.otsikko;
-        for (String otsikko : valinnat.keySet()) {
-            tilasto += "\n" + otsikko + ": " + valinnat.get(otsikko);
-        }
-        return tilasto;
-    }
-    
-    
 }

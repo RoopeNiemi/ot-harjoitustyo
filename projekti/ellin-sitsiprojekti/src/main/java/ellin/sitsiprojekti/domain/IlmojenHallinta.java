@@ -3,20 +3,12 @@
 package ellin.sitsiprojekti.domain;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class IlmojenHallinta {
     private ArrayList<Ilmo> ilmot;
-    //private Juomatilasto juomatilasto;
-    //private Ruokavaliotilasto ruokatilasto;
-    //private EkaFuksivuosiTilasto ekafuksitilasto;
     
     public IlmojenHallinta() {
         this.ilmot = new ArrayList<>();
-    }
-    
-    public int ilmojenMaara() {
-        return ilmot.size();
     }
 
     public ArrayList<Ilmo> getIlmot() {
