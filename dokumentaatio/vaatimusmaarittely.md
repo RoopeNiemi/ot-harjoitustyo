@@ -1,24 +1,19 @@
 ## Vaativuusmäärittely ##
 
-### Sovelluksen tarkoitus ###
-Ideana on toteuttaa sovellus, joka kokoaa sitseille ilmoittautuneista ihmisistä ja heidän antamistaan tiedoista yhteenvedon, josta sitsien järjestäjän on helppo nähdä esimerkiksi kuinka paljon ruokaa ja juomaa pitää ostaa jne. Lisäksi sovellus tekee ehdotuksen istumajärjestyksestä, jossa on otettu huomioon sitsaajien vierustoveritoiveet.
+### Sitsisovelluksen tarkoitus ###
+Sitsisovelluksen ideana on koota kätevästi sitseihin liittyviä tilastoja käyttäjän nähtäväksi, eli säästää näin sitsien järjestäjän aikaa. Sovellust toimii siten, että Matrixin nettisivuilta kopioidaan ilmoittautuneiden lista (johon tosin pääsee käsiksi vain edmis-oikeuksilla), jonka jälkeen sovellus kokoaa siitä käyttäjän avustuksella hyödyllisiä tilastoja.
 
 ### Toiminnallisuudet ###
-Aluksi:
-* Näyttää tilastot:
-  * Ilmoittautuneiden määrä (tehty)
-  * Ruokavaliojakauma (liha/kasvis/vegaani) (tehty osittain)
-  * Juomajakauma (tehty)
-  * Ensimmäinen ensimmäinen fuksivuosi (tehty)
-  * Erityisruokavaliot (tehty eka versio)
-  * ...
-* Kokoaa yhteen tiedot kunkin juoman menekistä, ts. laskee kuinka paljon kutakin juomaa tarvitsee ostaa
+* Mahdollisuus valita mistä (nettisivuilta kopioidun) taulukon sarakkeista tehdään mikäkin tilasto
+* Näyttää raakaversiot tilastoista:
+  * Kaikki mainitut erityisruokavaliot
+  * Juomajakauma: kuinka monta kpl mitäkin juomaa on valittu
+* Kokoaa yhteen käyttäjän syöttämien tietojen (esim. tietyn juoman tilavuus per sitsaaja) perusteella, kuinka paljon mitäkin juomaa täytyy sitsejä varten ostaa, kuinka monta kasvisruokavalioista ja vegaania sitseille osallistuu sekä mitä muita erikoisruokavalioita kahden edellisen lisäksi sitsaajilta löytyy.
 
-Myöhemmin:
-* Tekee sitsiplassiehdotuksen ottaen huomioon paikkatoiveet
+Jatkokehitettävääkin sovellukselle löytyy, sillä siihen voisi lisätä vielä toiminnon, joka loisi istumajärjestysehdotuksen ilmoittautumistaulukon istumapaikkatoiveiden pohjalta. Siihen ei kuitenkaan aika vielä tämän kurssin puitteissa riittänyt.
 
 ### Toteutus ###
-Paras käytettävyys sovelluksella olisi, jos se pystyisi lukemaan ilmoittautuneiden listan suoraan netistä (Matrixin nettisivujen ilmoittautumissivulta), mutta sen toteuttaminen lienee hieman hankalmpaa kuin esim. taulukon lukeminen tiedostosta. Siispä tämä asia on hieman auki vielä.
+Sovellusta käytetään graafisella käyttöliittymällä, jonka aloitusnäkymän tekstikenttään käyttäjä kopioi Matrixin nettisivuilta ilmoittautujataulukon. Taulukon ohjelma strukturoi siten, että käyttäjän valintojen mukaan tietyistä taulukon sarakkeista tehdään tietynlaiset tilastot, jotka sitten näytetään lopuksi käyttäjälle viimeisessä näkymässä.
 
 ### Käyttäjä ###
-Sovellus ei tarvitse muita käyttäjiä kuin ns. sitsijärjestäjän käyttäjän. Jos tietojen lukemisen Matrixin nettisivuilta saisi onnistumaan niin tietysti silloin pitäisi olla admin-tunnukset myös sinne, jotta näkee ilmoittautuneiden syöttämät tiedot.
+Sovelluksella on vain yhdenlainen käyttäjä, sitsien järjestäjä.
