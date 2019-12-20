@@ -9,7 +9,7 @@ Projektiin liittyvät tiedostot ovat omassa [kansiossaan](https://github.com/ell
 
 [Työaikakirjanpito](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
-[Vaatimusmäärittely](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Määrittelydokumentti](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [Luokkakaavio (arkkutehtuuri)](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
