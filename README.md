@@ -13,4 +13,6 @@ Ohjelma, joka kerää suoraan Matrixin nettisivuilta kopioidusta taulukosta tarv
 
 [Käyttöohje](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/dokumentaatio/ohje.md)
 
+[Testausdokumentti](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
+
 [Työaikakirjanpito](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
