@@ -2,7 +2,7 @@
 
 ### Asennus ###
 
-Lataa [loppupalautus-releasesta](https://github.com/ellikiiski/ot-harjoitustyo/releases/tag/loppupalautus) tiedosto ellin-sitsiprojekti.jar koneellesi ja käynnistä ohjelma joko klikkaamalla se auki tiedostohallinan graafisesta käyttöliittymästä tai komentoriviltä komennolla
+Lataa [loppupalautus-releasesta](https://github.com/ellikiiski/ot-harjoitustyo/releases/tag/loppupalautus) tiedosto *ellin-sitsiprojekti.jar* koneellesi ja käynnistä ohjelma joko klikkaamalla se auki tiedostohallinan graafisesta käyttöliittymästä tai komentoriviltä komennolla
 
 <pre>java -jar ellin-sitsiprojekti.jar</pre>
 
