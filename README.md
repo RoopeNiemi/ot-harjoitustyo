@@ -1,9 +1,9 @@
-# **OHJELMISTOTEKNIIKKA 2019** #ö
+# **OHJELMISTOTEKNIIKKA 2019** #
 
 ## *PROJEKTITYÖ - Sitsienjärjestysapulainen* ##
 Ohjelma, joka kerää suoraan Matrixin nettisivuilta kopioidusta taulukosta tarvittavat tiedot ja kokoaa niistä käyttäjän haluamat tilastot.
 
-### [Loppupalautus realease](https://github.com/ellikiiski/ot-harjoitustyo/releases/tag/loppupalautus) ###
+### [Loppupalautus release](https://github.com/ellikiiski/ot-harjoitustyo/releases/tag/loppupalautus) ###
 
 ### [Dokumentaatio](https://github.com/ellikiiski/ot-harjoitustyo/tree/master/dokumentaatio) ###
 
