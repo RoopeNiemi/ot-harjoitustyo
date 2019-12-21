@@ -4,7 +4,7 @@
 
 Ohjelman rakenne pakkaustasolla on seuraavanlainen:
 
-Kuva
+![pakkausrakenne](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/kuvat/otpaska1.jpg)
 
 Pakkaus *ellin.sitsiprojekti.ui* sisältää käyttöliittymän luokat sekä pakkaus *ellin.sitsiprojekti.domain* sovelluslgiikan.
 
@@ -24,12 +24,12 @@ Sovelluslogiikka voidaan jakaa kahteen osaan:
 
 #### Raa'an taulukkodatan käsittely ja ilmoittautumisten hallinta ####
 
-Kuva
+![Ilmojenhallinta-luokkis](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/kuvat/otpaska2.jpg)
 
 Luokka *IlmojenHallinta* käsittelee käyttöliittymältä saadun taulukon ja hallitsee *Ilmo*-olioita.
 
 #### Tilastointi ####
 
-Kuva
+![Tilasto-luokkis](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/kuvat/otpaska3.jpg)
 
 Tilastot luodaan käyttöliittymästä, ja ne käyttävät hyödyksi luokan *IlmojenHallinta* ilmoittautumistietoja.
