@@ -10,7 +10,7 @@ Sovelluslogiikkaa on testattu automaattisin JUnit-testein pakkauksessa [ellin.si
 
 Ohjelman testikattavuus (ilman käyttöliittymää) on rivikattavuuden osalta 93% ja haarautumakattavuuden osalta 90%.
 
-Tähän jacoco-kuva.
+![jacoco](https://github.com/ellikiiski/ot-harjoitustyo/blob/master/kuvat/ot-testaus-jacoco-lopullinen.JPG)
 
 Main-luokka on kokonaan testaamatta, ja sen lisäksi muutama poikkeustilanne, joissa esim. merkkijono ei ole muutettavissa kokonaisluvuksi. Näihin tilanteisiin ei kuitenkaan pitäisi sovellusta oikein käytettäessä törmätä.
 
